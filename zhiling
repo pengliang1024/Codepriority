@@ -1,0 +1,63 @@
+#git
+<--步骤1：本地上传 -->
+  // a. 进入存放代码文件夹
+  cd xxxx（路径）
+  // b. 添加到缓存区（注add 与 . 之间有空格
+  git add .
+  // c. 提交
+  git commit -m "备注内容"
+
+<--步骤2：同步到Github  -->
+  git push 
+  // git push origin master
+
+场景2：与其他开发者协作开发
+<-- 此处关于大量的主支、分支应用-->
+  // 创建分支
+  git branch <name>
+  // 查看分支
+  git branch
+  // 切换分支
+  git checkout <name>
+  // 合并某分支到当前分支
+  git merge <name>
+  // 删除分支
+  git branch -d <name>
+
+// 多人协作开发的场景有很多，此处仅列举2个作为实例
+<-- 实例1：其他开发者向你代码仓库提交了代码，您需要用最新的代码 -->
+
+// 1. 先去 `GitHub` 接受请求
+// 2. 进入本来仓库的文件夹
+  cd xxxxx（路径）
+// 3. 从Github上远程同步代码到本地
+  git pull
+  // git pull origin master
+
+
+<-- 实例2：其他开发者在你的Github仓库上更新了文档，本地需要上传代码 -->
+// 注：本地需先同步远程Github上的代码
+
+// 1. 进入仓库的文件夹
+  cd xxx（路径）
+// 2. 同步Github上的代码
+  git pull
+  <-- 异常操作处理 -->
+  press "i"
+  write your merge message
+  press "esc"
+  write ":wq"
+  then press enter
+
+// 3. 本地上传代码
+  // a. 添加到缓存区
+  git add .
+  // b. 提交
+  git commit -m "备注内容"
+
+// 4. 同步到Github
+  git push 
+
+
+
+
